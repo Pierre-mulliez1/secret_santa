@@ -2,13 +2,7 @@
 #code for email random selection
 import random
 
-email_dict = {'pierremulliez1@gmail.com':'Pierre','thomas6997@hotmail.fr': 'Thomas',
-                'agathepoutiers@gmail.com':'Agathe','Barthemulliez@hotmail.com':'Barthe',
-                'Bertillepoutiers@gmail.com':'Bertille','camillepoutiers@sfr.fr':'Camille',
-                'paulinettemul@gmail.com':'Pauline','chloepoutiers@gmail.com':'Chloe',
-                'maxencepoutiers@gmail.com':'Maxence','as.mulliez@alinea.com':'Astrid',
-                'as.mulliez@alinea.com ':'Vadim','amulliez9@gmail.com':'Alexis',
-                'aymericpoutiers@gmail.com':'Aymeric'
+email_dict = {
                 }
 gotname = list(email_dict.values())
 
