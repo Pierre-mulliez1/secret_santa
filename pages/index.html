@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#182924">
+  <title>Secret Santa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../static/style/style.css">
+</head>
+<body>
+  <div class="scene">
+    <div class="snow" id="snow" aria-hidden="true"></div>
+    <div class="layout">
+      <header class="brand"><button type="button" class="brand-mark" id="unlock" aria-label="Désactiver la limite de tirage" title="Désactiver la limite de tirage">&#10052;</button> La magie de l'IA</header>
+      <main>
+        <section class="content" aria-labelledby="title">
+          <div id="welcome">
+            <div class="participants" aria-label="Participants">
+              <ul class="participants-list">
+                <li>Astrid</li>
+                <li>Alexis</li>
+                <li>Barté</li>
+                <li>Pierre</li>
+                <li>Pauline</li>
+                <li>Vadim</li>
+                <li>Thomas</li>
+                <li>Artemis</li>
+                <li>Victoire</li>
+              </ul>
+            </div>
+            <p class="eyebrow"> Marques tes initialies pour découvrir ton tirage</p>
+            <h1 id="title">Secret Santa</h1>
+            <p class="intro"> Qui tireras tu cette année ?</p>
+            <form id="form">
+              <label for="password">Ton code pas très secret</label>
+              <div class="entry">
+                <input id="password" name="password" type="password" placeholder="Votre code" autocomplete="off" required>
+                <button class="submit" type="submit">D&eacute;couvrir</button>
+              </div>
+              <p class="feedback" id="feedback" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+          <div class="reveal" id="reveal" hidden>
+            <button type="button" class="gift" id="gift" aria-label="Ouvrir le cadeau">&#127873;</button>
+            <p class="reveal-label" id="gift-label">Qu'est ce que c'est  ?</p>
+            <p class="reveal-copy" id="gift-prompt">Cliques sur le cadeau pour d&eacute;couvrir le secret.</p>
+            <p class="grinch" id="reveal-warning" role="status" hidden>M&egrave;le-toi de ton tirage</p>
+            <div id="result" aria-live="polite" hidden>
+              <p class="reveal-label">Papa Noel sera t'il généreux ?</p>
+              <p class="name" id="secret"></p>
+              <p class="reveal-copy">&Agrave; vous de jouer ! 60 unités de générosité </p>
+            </div>
+            <button type="button" class="reset" id="reset">Revenir &agrave; l'accueil</button>
+          </div>
+        </section>
+      </main>
+      <footer>Fait avec  une touche de magie agentique.</footer>
+    </div>
+  </div>
+  <script src="../static/script/secrets.js"></script>
+  <script src="../static/script/app.js"></script>
+</body>
+</html>

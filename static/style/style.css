@@ -1,0 +1,44 @@
+:root { color-scheme: dark; font-family: "DM Sans", sans-serif; color: #fff; background: #182924; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; min-height: 100svh; }
+    .scene { position: relative; min-height: 100vh; min-height: 100svh; overflow: hidden; background: linear-gradient(90deg, rgba(10, 23, 21, .22), rgba(10, 23, 21, .85)), url("../../pictures/Gemini_2.jpg") center center / cover no-repeat; }
+    .snow { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 1; }
+    .flake { position: absolute; top: -30px; color: #fff; opacity: .8; animation: snowfall var(--duration) linear var(--delay) infinite; }
+    @keyframes snowfall { from { transform: translate3d(0, -30px, 0) rotate(0deg); } to { transform: translate3d(var(--drift), 110vh, 0) rotate(240deg); } }
+    .layout { position: relative; z-index: 2; min-height: 100vh; min-height: 100svh; max-width: 1440px; margin: auto; padding: 38px 6%; display: flex; flex-direction: column; }
+    .brand { display: flex; align-items: center; gap: 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0; }
+    .brand-mark { width: 30px; height: 30px; display: grid; place-items: center; padding: 0; border: 1px solid rgba(255,255,255,.55); border-radius: 50%; background: transparent; color: #e8c985; font-size: 17px; }
+    main { flex: 1; display: flex; align-items: center; justify-content: flex-end; padding: 40px 0; }
+    .content { width: min(100%, 410px); }
+    .participants { height: 120px; margin-bottom: 18px; overflow: hidden; perspective: 240px; text-align: center; }
+    .participants-list { margin: 0; padding: 0; list-style: none; color: #e8c985; font-size: 19px; font-weight: 700; line-height: 1.5; transform-origin: 50% 0; animation: participants-crawl 18s linear infinite; }
+    @keyframes participants-crawl { from { transform: rotateX(28deg) translateY(120px); } to { transform: rotateX(28deg) translateY(-100%); } }
+    .eyebrow { color: #e8c985; text-transform: uppercase; font-weight: 700; font-size: 11px; margin: 0 0 18px; }
+    h1 { font-family: "Playfair Display", Georgia, serif; font-size: 48px; font-weight: 500; line-height: 1.08; margin: 0 0 18px; }
+    .intro { color: #e6ece8; font-size: 16px; line-height: 1.65; max-width: 340px; margin: 0 0 32px; }
+    label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 10px; }
+    .entry { display: flex; gap: 8px; }
+    input { min-width: 0; flex: 1; height: 54px; padding: 0 16px; border: 1px solid rgba(255,255,255,.45); border-radius: 3px; background: rgba(255,255,255,.96); color: #20302a; font: inherit; outline-offset: 3px; }
+    input::placeholder { color: #78827b; }
+    button { font: inherit; cursor: pointer; }
+    .submit { min-height: 54px; padding: 0 22px; background: #d6bd82; border: 0; border-radius: 3px; color: #1d3028; font-weight: 700; }
+    .submit:hover { background: #eddaaa; }
+    .submit:disabled { opacity: .65; cursor: wait; }
+    .feedback { min-height: 22px; margin: 10px 0 0; color: #ffd3c7; font-size: 13px; line-height: 1.5; }
+    .grinch { color: #b7ee65; font-weight: 700; }
+    .reveal { text-align: center; padding: 10px 0 0; }
+    .gift { display: block; margin: 0 auto 20px; border: 0; background: none; font-size: 76px; line-height: 1; animation: gift-arrive .7s both; }
+    .gift:hover { transform: rotate(-8deg) scale(1.08); }
+    .gift.opening { animation: gift-open .65s both; }
+    .reveal-label { color: #e8c985; font-size: 12px; font-weight: 700; text-transform: uppercase; margin: 0 0 12px; }
+    .name { font-family: "Playfair Display", Georgia, serif; font-size: 42px; line-height: 1.15; overflow-wrap: anywhere; margin: 0 0 18px; animation: name-appear .6s both; }
+    .reveal-copy { margin: 0; color: #e6ece8; line-height: 1.5; }
+    .reset { margin-top: 26px; border: 0; border-bottom: 1px solid rgba(255,255,255,.6); background: transparent; padding: 4px 0; color: #fff; font-size: 13px; }
+    footer { color: rgba(255,255,255,.7); font-size: 12px; }
+    [hidden] { display: none !important; }
+    @keyframes gift-arrive { from { opacity: 0; transform: translateY(28px) rotate(-12deg) scale(.8); } to { opacity: 1; transform: none; } }
+    @keyframes gift-open { 0% { transform: rotate(0) scale(1); } 35% { transform: rotate(-12deg) scale(1.15); } 70% { transform: rotate(12deg) scale(1.15); } 100% { transform: scale(1); } }
+    @keyframes name-appear { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+    @media (max-width: 700px) { .scene { background-position: 35% center; background-image: linear-gradient(0deg, rgba(10,23,21,.96) 0%, rgba(10,23,21,.74) 55%, rgba(10,23,21,.25) 100%), url("../../pictures/Gemini_2.jpg"); } .layout { padding: 24px; } main { align-items: flex-end; padding: 140px 0 50px; } .content { width: 100%; } h1 { font-size: 40px; } }
+    @media (max-width: 350px) { .entry { flex-direction: column; } h1 { font-size: 34px; } }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; } .participants { height: auto; } .participants-list { animation: none; transform: none; } }
